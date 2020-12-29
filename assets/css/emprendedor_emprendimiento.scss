@@ -1,0 +1,498 @@
+/* esquema de colores */
+$white: #ffffff;
+$black: #000000;
+$blue: #009fe3;
+$grey: #3a3a38;
+$light-grey: #818181;
+
+/* tipografías */
+@mixin h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@mixin h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@mixin h4 {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+@mixin h5 {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+@mixin h6 {
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+@mixin boton_h1 {
+    font-size: 16px;
+    font-weight: normal;
+    ;
+}
+
+@mixin boton_h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@mixin boton_h3 {
+    font-size: 9px;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'camptonbold_demo';
+    src: url('campton-bold-webfont.eot');
+    src: url('campton-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('campton-bold-webfont.woff2') format('woff2'),
+        url('campton-bold-webfont.woff') format('woff'),
+        url('campton-bold-webfont.ttf') format('truetype'),
+        url('campton-bold-webfont.svg#camptonbold_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'camptonlight_demo';
+    src: url('campton-light-webfont.eot');
+    src: url('campton-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('campton-light-webfont.woff2') format('woff2'),
+        url('campton-light-webfont.woff') format('woff'),
+        url('campton-light-webfont.ttf') format('truetype'),
+        url('campton-light-webfont.svg#camptonlight_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    //overflow-x: hidden;
+    font-family: campton;
+    main{
+        padding: 0;
+        margin: 0;
+       
+    }
+
+}
+/* tamaño background menú lateral */
+.contenedor-perfil{
+    height: 780px!important;
+    position: absolute;
+    z-index: 300;
+}
+
+/* mis emprendimientos */
+
+
+
+.resumen-total {
+    width: 70%;
+    margin-left: auto;
+    background-color: #f5f5f5;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    .tit-emprendimiento {
+        padding-top: 40px ;
+    h1 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+    }
+
+    hr {
+        background-color: gray;
+
+    }
+
+    .resumen {
+        border: 1px solid #dadada;
+        border-radius: 22px;
+
+        .titulo {
+            h1 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+        .cuadros {
+
+            h1 {
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            h3 {
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: normal;
+            }
+
+            .centrador {
+                height: 90px;
+                width: 90px;
+                border-radius: 10px;
+                margin: auto;
+
+                &.uno {
+                    background-color: #2857b4;
+                }
+
+                &.cero {
+                    background-color: #1b9dd9;
+                }
+            }
+        }
+    }
+}
+
+/* tabla emprendimientos desktop */
+.tabla-desktop {
+    
+    
+    background-color: #f5f5f5;
+    
+    padding: 30px;
+    .table {
+        border-collapse: collapse;
+        border-radius: 1em;
+        overflow: hidden;
+        width: 70%;
+        margin-left: auto;
+        background-color: white;
+        
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            width: 100%;
+        }
+
+        thead {
+
+            th {
+                font-size: 14px;
+                font-weight: normal;
+                vertical-align: middle;
+
+            }
+        }
+
+        td {
+            vertical-align: middle;
+            font-size: 14px;
+            font-weight: normal;
+
+
+            .logo {
+                width: 60px;
+                height: 60px;
+
+            }
+
+            h2 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            h3 {
+                font-size: 14px;
+                font-weight: normal;
+            }
+
+            .rrss {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .azul {
+            background-color: #2857b4;
+            color: white;
+            border-radius: 22px;
+            font-weight: lighter;
+            width: 150px;
+            margin-right: 5px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .negro {
+            background-color: black;
+            color: white;
+            border-radius: 22px;
+            font-weight: lighter;
+            width: 150px;
+            margin-left: 5px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+    }
+}
+
+
+/* tabla emprendimientos mobile */
+.tabla-resp {
+    margin-top: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;    
+    box-shadow: 0 -5px 5px -5px #c0c0c0;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .card {
+
+        border: 2px solid #dadada;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+
+        .card-body {
+            background-color: white;
+            padding-top: 70px;
+
+            img {
+                height: 120px;
+                width: 120px;
+                position: absolute;
+                z-index: 1;
+                top: -68px;
+                right: 125px;
+            }
+        }
+
+        .card-dos {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .card-datos {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: auto;
+                text-align: center;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: bold;
+
+                }
+
+                h5 {
+                    font-size: 16px;
+                    font-weight: normal;
+
+                }
+            }
+        }
+
+        .lineas {
+            color: gray;
+        }
+    }
+
+    .redes {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+
+        .rrss {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .RUT {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .categoria {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .fecha {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .verificacion {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .azul {
+            background-color: #2857b4;
+            color: white;
+            border-radius: 22px;
+            font-weight: lighter;
+            width: 100px;
+        }
+
+        .negro {
+            background-color: black;
+            color: white;
+            border-radius: 22px;
+            font-weight: lighter;
+            width: 100px;
+        }
+    }
+}
+
+/*boton añadir*/
+.anadir {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    padding-bottom: 2em;
+
+
+    @media (min-width: 992px) {
+        width: 70%;
+        margin-left: auto;
+
+    }
+
+    .boton {
+        color: $white;
+        background-color: $blue;
+        border-radius: 22px;
+        font-weight: lighter;
+        width: 310px;
+        margin-right: 12px;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+/*nuestros partners */
+
+
+.linea {
+    height: 0;
+
+    .azul {
+        height: 5px;
+        width: 218px;
+        margin-top: -25px;
+        background-color: transparent;
+
+    }
+}
+
+
+/* footer */
+.footer {
+    background-color: #000000;
+    padding: 3em;
+    .fas{
+        font-weight: 200 !important;
+    }
+
+    .logo-footer {
+        height: 90px;
+
+        @media (min-width: 992px) {
+            height: 70px;
+        }
+    }
+
+    .nuestros-contactos,
+    .nuestra-direccion,
+    .conecta {
+        padding-top: 1em;
+
+        @media (min-width: 992px) {
+            padding-top: 0;
+        }
+    }
+
+    .icono_footer {
+        width: 11px;
+        height: 11px;
+    }
+
+    .h5_footer {
+        @include h5;
+        color: $light-grey;
+    }
+
+    .h6_footer {
+        @include h6;
+        color: $white;
+        
+    }
+
+    span {
+        padding-right: 10px;
+    }
+
+    .conecta {
+        width: 30%;
+
+        .rrss {
+            height: 15px;
+        }
+    }
+}
